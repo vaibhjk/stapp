@@ -26,7 +26,6 @@ def recommend(movie):
 
 st.header('Movie Recommender System')
 movies = pickle.load(open('movies.pkl','rb'))
-pip install gdown
 
 import gdown
 
