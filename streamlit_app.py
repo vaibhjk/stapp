@@ -27,15 +27,7 @@ def recommend(movie):
 st.header('Movie Recommender System')
 movies = pickle.load(open('movies.pkl','rb'))
 
-import gdown
-
-# Define the Google Drive folder link
-folder_link = 'https://drive.google.com/file/d/18HrwjjKAQSB2sJoG8Snk7FSvOM2Ejo2A/view?usp=drive_link'
-
-# Download files from the folder
-gdown.download_folder(folder_link, output='similarity')
-
-similarity = pickle.load(open('similarity.pkl','rb'))
+similarity = pickle.load(open('https://drive.google.com/file/d/18HrwjjKAQSB2sJoG8Snk7FSvOM2Ejo2A/view?usp=drive_link.pkl','rb'))
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
